@@ -1,14 +1,3 @@
-<?php
-    require_once "koneksi.php";
-    session_start();
-    if (empty($_SESSION['Nama_Pengguna'])) {
-        header("Location:index.php");
-    }
-    
-?>
-
-
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -17,7 +6,15 @@
 	<title>tu.skul</title>
 
 
+	<!-- 
+	//////////////////////////////////////////////////////
 
+	
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -61,39 +58,31 @@
 
 	</head>
 	<body>
-	<div class="fh5co-loader"></div>	
+		
+	<div class="fh5co-loader"></div>
+	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container-wrap">
 			<div class="top-menu">
 				<div class="row">
 					<div class="col-md-12 col-offset-0 text-center">
-
-						<div id="fh5co-logo">
-						<a href="homepage.php"><img src="logo/tu.png" width="150px" ></a>
-						</div>
-
+						<div id="fh5co-logo"><a href="index.html">tu.skul</a></div>
 					</div>
 					<div class="col-md-12 col-md-offset-0 text-center menu-1">
 						<ul>
-							<li class="active"><a href="homepage.php">Home</a></li>
-							<li><a href="donasi_saya.php">Donasi Saya</a></li>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="sermons.html">Donasi Saya</a></li>
 							<li class="has-dropdown">
-								<a href="galangdana.html">Galang Dana</a>
+								<a href="news.html">Galang Dana</a>
 								<ul class="dropdown">
 									<li><a href="#">Mahasiswa</a></li>
 									<li><a href="#">SMA</a></li>
 									
 								</ul>
 							</li>
-							<li><a href="inbox.php">Inbox</a></li>
-							<li class="has-dropdown">
-								<a href="profil.php">Akun</a>
-									<ul class="dropdown">
-										<li><a href="profil.php">Profil</a></li>
-										<li><a href="logout.php">Log out</a></li>
-									</ul>
-							</li>
+							<li><a href="events.html">Inbox</a></li>
+							<li><a href="about.html">Account</a></li>
 							
 							
 						</ul>
@@ -114,10 +103,8 @@
 				   			<div class="col-md-6 col-md-offset-3 text-center">
 				   				<div class="slider-text">
 					   				<div class="slider-text-inner">
-									   <h1>Selamat datang <?php echo $_SESSION['Nama_Pengguna']; ?></h1>
-									   <h2>Sudah siap memberi perubahan hari ini ?</h2>
-  									   <h1><b>DONASI SEKARANG !</b></h1>
-											<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://www.youtube.com/watch?v=k096O5M-c44"> <i class="icon-play4"></i> DONASI</a> 
+					   					<h1><b>DONASI SEKARANG !</b></h1>
+											<p><a class="btn btn-primary btn-demo popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"> <i class="icon-play4"></i> DONASI</a> 
 												</p>
 					   				</div>
 				   				</div>
@@ -148,53 +135,125 @@
 			<div class="row animate-box">
 				<div class="col-md-12 col-md-offset-0 text-center">
 					<h2>Ayo Donasi Sekarang. Jadilah #pemberiperubahan</h2>
+					<span>We are open Sunday to Monday</span>
 				</div>
 			</div>
 		</div>
 		<hr>
-
+		<div id="fh5co-counter" class="fh5co-counters">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center animate-box">
+					<p>We have a fun facts far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-6 text-center">
+							<span class="fh5co-counter js-counter" data-from="0" data-to="9452" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Members</span>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-6 text-center">
+							<span class="fh5co-counter js-counter" data-from="0" data-to="214" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Ministries</span>
+						</div>
+						<div class="clearfix visible-sm-block visible-xs-block"></div>
+						<div class="col-md-3 col-sm-6 col-xs-6 text-center">
+							<span class="fh5co-counter js-counter" data-from="0" data-to="433" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Classes</span>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-6 text-center">
+							<span class="fh5co-counter js-counter" data-from="0" data-to="512" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Activities</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="fh5co-services" class="fh5co-light-grey">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Bantu siapa hari ini ?</h2>
-					<p>Kami menyediakan layanan bantuan berupa dana yang dapat anda sumbangkan untuk adik-adik kita yang putus sekolah agar dapat melanjutkan kembali pendidikannya.</p>
+					<h2>Services</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 animate-box">
 					<div class="services">
-						<a href="#" class="img-holder"><img class="img-responsive" src="images/img_bg_1.jpg"></a>
+						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-1.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
-							<h3><a href="#">Fina ingin bersekolah di SMAN 1 Jember</a></h3>
-							<p>Bantu Fina dengan berdonasi agar dapat melanjutkan pendidikannya ke jenjang pendidikan SMA, yaitu pada sekolah impiannya di SMAN 1 Jember.</p>
-							
+							<h3><a href="#">Live Events</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
 					<div class="services">
-						<a href="#" class="img-holder"><img class="img-responsive" src="images/img_bg_2.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-3.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
-							<h3><a href="#">Bantu Iqbal agar dapat bersekolah di sekolah favoritnya</a></h3>
-							<p>Bantu Iqbal agar dapat melanjutkan sekolah di SMA favoritnya. Sekolah favoritnya adalah SMAN 1 Samarinda. Iqbal memiliki cita-cita yang sangat mulia yaitu menjadi seorang guru</p>
-							
+							<h3><a href="#">Biblical Counseling</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 animate-box">
 					<div class="services">
-						<a href="#" class="img-holder"><img class="img-responsive" src="images/img_bg_3.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
+						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
-							<h3><a href="#">Kini Ria sudah dapat melanjutkan sekolahnya dan mendapat prestasi</a></h3>
-							<p>Sekarang Ria sudah dapat melanjutkan sekolahnya dan ia juga dapat membuktikan bahwa ia dapat menjadi siswi yang berprestasi di SMA nya saat ini.</p>
-							
+							<h3><a href="#">Helping Children</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		
+		<div id="fh5co-sermon">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Our Sermons</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-center animate-box">
+					<div class="sermon-entry">
+						<div class="sermon" style="background-image: url(images/sermon-1.jpg);">
+							<div class="play">
+								<a class="popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play3"></i></a>
+							</div>
+						</div>
+						<h3>Soul Winning</h3>
+						<span>Pstr. John Doe</span>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="sermon-entry">
+						<div class="sermon" style="background-image: url(images/sermon-3.jpg);">
+							<div class="play">
+								<a class="popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play3"></i></a>
+							</div>
+						</div>
+						<h3>Message From God</h3>
+						<span>Pstr. John Doe</span>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="sermon-entry">
+						<div class="sermon" style="background-image: url(images/sermon-2.jpg);">
+							<div class="play">
+								<a class="popup-vimeo" href="https://vimeo.com/channels/staffpicks/93951774"><i class="icon-play3"></i></a>
+							</div>
+						</div>
+						<h3>Our World Today</h3>
+						<span>Pstr. John Doe</span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="fh5co-bible-verse">
 			<div class="overlay"></div>
 			<div class="row">
@@ -204,24 +263,24 @@
 							<div class="item">
 								<div class="bible-verse-slide active text-center">
 									<blockquote>
-										<p>&ldquo;Kita harus menemukan waktu untuk berhenti dan berterima kasih kepada orang-orang yang telah membuat perbedaan dalam hidup kita.&rdquo;</p>
-										<span>John F. Kennedy</span>
+										<p>&ldquo;For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.&rdquo;</p>
+										<span>John 3:16</span>
 									</blockquote>
 								</div>
 							</div>
 							<div class="item">
 								<div class="bible-verse-slide active text-center">
 									<blockquote>
-										<p>&ldquo;Jika anda benar-benar bersyukur, apa yang anda lakukan? Anda akan suka berbagi.&rdquo;</p>
-										<span>W. Clement Stone</span>
+										<p>&ldquo;The LORD [is] my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.&rdquo;</p>
+										<span>Psalms 28:7</span>
 									</blockquote>
 								</div>
 							</div>
 							<div class="item">
 								<div class="bible-verse-slide active text-center">
 									<blockquote>
-										<p>&ldquo;Hanya ada dua cara untuk menjalani hidup anda. Salah satunya adalah seolah-olah ‘nothing is a miracle’. Yang kedua, seolah-olah segala sesuatu adalah keajaiban.&rdquo;</p>
-										<span>Albert Einstein</span>
+										<p>&ldquo;And we have known and believed the love that God hath to us. God is love; and he that dwelleth in love dwelleth in God, and God in him.&rdquo;</p>
+										<span>1 John 4:16</span>
 									</blockquote>
 								</div>
 							</div>
@@ -230,12 +289,45 @@
 				</div>
 			</div>
 		</div>
-		
+		<div id="fh5co-events">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>Our Events</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="events-entry">
+						<span class="date">March 10, 2017</span>
+						<h3><a href="#">Message From God</a></h3>
+						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="events-entry">
+						<span class="date">March 20, 2017</span>
+						<h3><a href="#">Message From God</a></h3>
+						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="events-entry">
+						<span class="date">March 30, 2017</span>
+						<h3><a href="#">Message From God</a></h3>
+						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+						<a href="#">Read More <i class="icon-arrow-right3"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="fh5co-news" class="fh5co-light-grey">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Info Buat Kamu</h2>
-					<p>informasi mengenai universitas dan sekolah di Indonesia.</p>
+					<h2>Our News</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -244,9 +336,9 @@
 						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-1.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
 							<span class="date">March 30, 2017</span>
-							<h3><a href="#">Universitas Indonesia</a></h3>
-							<p>Universitas Indonesia disingkat sebagai UI, adalah sebuah perguruan tinggi di Indonesia. Kampus utamanya terletak di bagian Utara dari Depok, Jawa Barat tepat di perbatasan antara Depok dengan wilayah Jakarta Selatan, dan kampus utama lainnya terdapat di daerah Salemba di Jakarta Pusat.</p>
-							
+							<h3><a href="#">Live News</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
@@ -255,9 +347,9 @@
 						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-3.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
 							<span class="date">March 30, 2017</span>
-							<h3><a href="#">Institut Pertanian Bogor</a></h3>
-							<p>Institut Pertanian Bogor adalah sebuah perguruan tinggi pertanian negeri yang berkedudukan di Bogor. Sebelum diresmikan pada tahun 1963, IPB adalah sebuah fakultas pertanian pada Universitas Indonesia.</p>
-							
+							<h3><a href="#">Biblical Counseling</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
@@ -266,9 +358,9 @@
 						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-2.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
 							<span class="date">March 30, 2017</span>
-							<h3><a href="#">Universitas Negeri Malang</a></h3>
-							<p>Institut Pertanian Bogor adalah sebuah perguruan tinggi pertanian negeri yang berkedudukan di Bogor. Sebelum diresmikan pada tahun 1963, IPB adalah sebuah fakultas pertanian pada Universitas Indonesia.</p>
-							
+							<h3><a href="#">Helping Children</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
@@ -277,9 +369,9 @@
 						<a href="#" class="img-holder"><img class="img-responsive" src="images/img-4.jpg" alt="Free HTML5 Website Template by freehtml5.co"></a>
 						<div class="desc">
 							<span class="date">March 30, 2017</span>
-							<h3><a href="#">Institut Teknologi Sepuluh Nopember</a></h3>
-							<p>Institut Teknologi Sepuluh Nopember adalah perguruan tinggi negeri yang terletak di Surabaya. ITS awalnya didirikan oleh Yayasan Perguruan Tinggi Teknik yang diketuai oleh dr. Angka Nitisastro.</p>
-							
+							<h3><a href="#">Helping Children</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<a href="#">Read More <i class="icon-arrow-right3"></i></a>
 						</div>
 					</div>
 				</div>
@@ -290,10 +382,10 @@
 	<div class="container-wrap">
 		<footer id="fh5co-footer" role="contentinfo">
 			<div class="col-md-4 text-center">
-				<h3>Institut Teknologi Sepuluh Nopember Surabaya</h3>
+				<h3>198 West 21th Street, Suite 721 New York NY 10016</h3>
 			</div>
 			<div class="col-md-4 text-center">
-				<h2><a href="#">tuskul</a></h2>
+				<h2><a href="#">Church</a></h2>
 			</div>
 			<div class="col-md-4 text-center">
 				<p>
@@ -306,7 +398,10 @@
 			</div>
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
-					
+					<p>
+						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+					</p>
 				</div>
 			</div>
 		</footer>
